@@ -60,8 +60,10 @@ string pointToString(Point p, int precision) {
 
 string boxToString(Box b, int precision) {
 ostringstream oss;
-oss<<"ul=("<<b.ul.x<<","<<b.ul.y<<"),w="<<b.width<<",h="<<b.height;
+oss<<setprecision(precision);
+oss<<"("<<b.ul.x<<","<<b.ul.y<<","<<b.width<<","<<b.height<<")";
 
+return oss.str();
   
   // SAMPLE FORMAT: [ul=(3.4,-5),w=5,h=7] (without the []s)
   
